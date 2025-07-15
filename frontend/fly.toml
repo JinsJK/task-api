@@ -1,10 +1,17 @@
-app = "frontend-lively-hill-6164"  # or your actual app name
+app = "frontend-lively-hill-6164"
 primary_region = "fra"
 
 [build]
-  builder = "heroku/buildpacks:20"
-  buildpacks = ["https://github.com/superfly/static-buildpack"]
+  build-target = "."
 
 [[statics]]
   guest_path = "/app/dist"
   url_prefix = "/"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
