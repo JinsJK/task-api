@@ -1,6 +1,6 @@
 <template>
   <main class="max-w-xl mx-auto py-10 px-4">
-    <h1 class="text-2xl font-bold mb-6">Task Manager</h1>
+    <h1 class="text-2xl font-bold mb-6">Task Manager ✔️</h1>
     
     <TaskForm @task-added="fetchTasks" />
 
