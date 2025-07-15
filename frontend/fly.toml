@@ -1,0 +1,12 @@
+app = "frontend-lively-hill-6164"  # or whatever Fly generated for you
+primary_region = "fra"
+
+[build]
+  builder = "heroku/buildpacks:20"
+
+[build.buildpacks]
+  buildpacks = ["https://github.com/heroku/buildpack-static"]
+
+[[statics]]
+  guest_path = "/app/dist"
+  url_prefix = "/"
