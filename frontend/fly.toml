@@ -1,10 +1,8 @@
-app = "frontend-lively-hill-6164"  # or whatever Fly generated for you
+app = "your-frontend-app-name"  # e.g., task-frontend-abc123
 primary_region = "fra"
 
 [build]
   builder = "heroku/buildpacks:20"
-
-[build.buildpacks]
   buildpacks = ["https://github.com/heroku/buildpack-static"]
 
 [[statics]]
