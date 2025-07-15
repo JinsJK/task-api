@@ -1,9 +1,9 @@
-app = "frontend-lively-hill-6164"
+app = "frontend-lively-hill-6164"  # or your actual app name
 primary_region = "fra"
 
 [build]
   builder = "heroku/buildpacks:20"
-  buildpacks = ["https://github.com/heroku/buildpack-static"]
+  buildpacks = ["https://github.com/superfly/static-buildpack"]
 
 [[statics]]
   guest_path = "/app/dist"
