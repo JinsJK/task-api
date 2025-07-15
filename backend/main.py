@@ -13,8 +13,8 @@ async def lifespan(app: FastAPI):
         async with engine.begin() as conn:
             await conn.run_sync(Base.metadata.create_all)
     except Exception as e:
-        print("🚨 DB init failed:", file=sys.stderr)
-        traceback.print_exc()  # <== this is key
+        print(f"🚨 DB init failed: {e}", file=sys.stderr)
+        traceback.print_exc()
     yield
 
 app = FastAPI(title="Task Manager API", lifespan=lifespan)
