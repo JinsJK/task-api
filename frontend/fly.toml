@@ -1,4 +1,4 @@
-app = "your-frontend-app-name"  # e.g., task-frontend-abc123
+app = "frontend-lively-hill-6164"
 primary_region = "fra"
 
 [build]
