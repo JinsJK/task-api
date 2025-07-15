@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
+from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 from backend.routes import router as task_router
 from backend.models import Base
@@ -18,6 +19,15 @@ async def lifespan(app: FastAPI):
     yield
 
 app = FastAPI(title="Task Manager API", lifespan=lifespan)
+
+# ✅ Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Replace with ["http://localhost:5173"] or your frontend URL in production
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/", include_in_schema=False)
 async def root():
