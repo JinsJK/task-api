@@ -14,7 +14,7 @@
 import { ref, onMounted } from 'vue'
 import api from './api'
 import TaskForm from './components/TaskForm.vue'
-import TaskList from './components/Tasklist.vue'
+import TaskList from './components/TaskList.vue'
 
 const tasks = ref([])
 const loading = ref(false)
