@@ -1,13 +1,9 @@
-# syntax=docker/dockerfile:1
-
-# Build stage
-FROM node:20-alpine AS builder
+FROM node:20.14.0-alpine AS builder
 WORKDIR /app
 COPY . .
 RUN npm install && npm run build
 
-# Static site serving stage
-FROM nginx:alpine
+FROM nginx:1.25.3-alpine
 COPY --from=builder /app/dist /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]

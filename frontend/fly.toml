@@ -1,12 +1,8 @@
 app = "frontend-lively-hill-6164"
 primary_region = "fra"
 
-[[statics]]
-  guest_path = "dist"
-  url_prefix = "/"
-
 [http_service]
-  internal_port = 8080
+  internal_port = 80
   force_https = true
   auto_start_machines = true
   auto_stop_machines = true
