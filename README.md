@@ -1,8 +1,8 @@
 # ✅ Task Manager App
 
 [![CI Pipeline](https://github.com/JinsJK/task-api/actions/workflows/ci.yml/badge.svg)](https://github.com/JinsJK/task-api/actions/workflows/ci.yml)
-[![Fly Deploy](https://github.com/JinsJK/task-api/actions/workflows/backend-deploy.yml/badge.svg)](https://github.com/JinsJK/task-api/actions/workflows/backend-deploy.yml)
-[![Deploy Frontend to Fly.io](https://github.com/JinsJK/task-api/actions/workflows/frontend-deploy.yml/badge.svg)](https://github.com/JinsJK/task-api/actions/workflows/frontend-deploy.yml)
+[![Fly Backend Deploy](https://github.com/JinsJK/task-api/actions/workflows/backend-deploy.yml/badge.svg)](https://github.com/JinsJK/task-api/actions/workflows/backend-deploy.yml)
+[![Fly Frontend Deploy](https://github.com/JinsJK/task-api/actions/workflows/frontend-deploy.yml/badge.svg)](https://github.com/JinsJK/task-api/actions/workflows/frontend-deploy.yml)
 ![Made with FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?logo=fastapi)
 ![Made with Vue](https://img.shields.io/badge/Frontend-Vue3-42b883?logo=vue.js)
 
