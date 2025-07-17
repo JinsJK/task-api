@@ -14,13 +14,13 @@ async def lifespan(app: FastAPI):
         async with engine.begin() as conn:
             await conn.run_sync(Base.metadata.create_all)
     except Exception as e:
-        print(f"🚨 DB init failed: {e}", file=sys.stderr)
+        print(f" DB init failed: {e}", file=sys.stderr)
         traceback.print_exc()
     yield
 
 app = FastAPI(title="Task Manager API", lifespan=lifespan)
 
-# ✅ Add CORS middleware
+# Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Replace with ["http://localhost:5173"] or your frontend URL in production
